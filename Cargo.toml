@@ -9,6 +9,6 @@ homepage = "https://github.com/arceos-org/arceos"
 repository = "https://github.com/arceos-org/aarch64_sysreg"
 documentation = "https://docs.rs/aarch64_sysreg"
 keywords = ["arceos", "arm", "aarch64", "registers"]
-categories = ["embedded", "no-std", "hardware-support", "os", "registers"]
+categories = ["embedded", "no-std", "hardware-support", "os"]
 
 [dependencies]
