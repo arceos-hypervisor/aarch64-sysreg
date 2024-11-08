@@ -1,5 +1,15 @@
 #![no_std]
 #![allow(non_camel_case_types)]
+#![deny(missing_docs)]
+
+//! # Aarch64 System Register
+//!
+//! This crate provides a set of types and operations for working with low-level system registers.
+//!
+//! ## Features
+//! - `OperationType`: Defines different types of operations that can be performed.
+//! - `RegistersType`: Defines various types of registers.
+//! - `SystemRegType`: Defines specific system registers.
 
 mod operation_type;
 mod registers_type;
