@@ -1,4 +1,4 @@
-use core::fmt::{Display, Formatter};
+use core::fmt::{Display, Formatter, LowerHex, Result, UpperHex};
 
 /// System register type
 #[derive(Clone, Copy, Debug, PartialEq)]
@@ -1311,7 +1311,7 @@ pub enum SystemRegType {
 
 impl Display for SystemRegType {
     /// Print system register name
-    fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
         match self {
             SystemRegType::OSDTRRX_EL1 => write!(f, "OSDTRRX_EL1"),
             SystemRegType::DBGBVR0_EL1 => write!(f, "DBGBVR0_EL1"),
@@ -2626,5 +2626,17 @@ impl From<usize> for SystemRegType {
             0x37f804 => Self::PSTATE_SPSEL,
             _ => panic!("Invalid system register value"),
         }
+    }
+}
+
+impl LowerHex for SystemRegType {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+        write!(f, "{:x}", *self as usize)
+    }
+}
+
+impl UpperHex for SystemRegType {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+        write!(f, "{:X}", *self as usize)
     }
 }

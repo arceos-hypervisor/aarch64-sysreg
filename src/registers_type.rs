@@ -5285,3 +5285,15 @@ impl From<usize> for RegistersType {
         }
     }
 }
+
+impl LowerHex for SystemRegType {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+        write!(f, "{:x}", *self as usize)
+    }
+}
+
+impl UpperHex for SystemRegType {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+        write!(f, "{:X}", *self as usize)
+    }
+}
