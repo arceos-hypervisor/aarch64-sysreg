@@ -1,6 +1,5 @@
 #![no_std]
 #![allow(non_camel_case_types)]
-#![deny(missing_docs)]
 
 //! # Aarch64 System Register
 //!
