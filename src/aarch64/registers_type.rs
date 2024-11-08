@@ -2635,7 +2635,6 @@ pub enum RegistersType {
     PF31 = 0x522,
     /// System register END
     END = 0x523,
-
 }
 
 impl Display for RegistersType {
@@ -3958,7 +3957,6 @@ impl Display for RegistersType {
             RegistersType::PF30 => write!(f, "PF30"),
             RegistersType::PF31 => write!(f, "PF31"),
             RegistersType::END => write!(f, "END"),
-
         }
     }
 }

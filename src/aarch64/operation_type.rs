@@ -2371,7 +2371,6 @@ pub enum OperationType {
     ZIP1 = 0x49e,
     /// Arm64 Operation ZIP2
     ZIP2 = 0x49f,
-
 }
 
 impl Display for OperationType {
@@ -3562,7 +3561,6 @@ impl Display for OperationType {
             OperationType::ZERO => write!(f, "ZERO"),
             OperationType::ZIP1 => write!(f, "ZIP1"),
             OperationType::ZIP2 => write!(f, "ZIP2"),
-
         }
     }
 }

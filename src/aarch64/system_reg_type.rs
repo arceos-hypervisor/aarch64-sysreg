@@ -1305,7 +1305,6 @@ pub enum SystemRegType {
     CNTPS_CVAL_EL1 = 0xff12,
     /// System register PSTATE_SPSEL
     PSTATE_SPSEL = 0xff13,
-
 }
 
 impl Display for SystemRegType {
@@ -1963,7 +1962,6 @@ impl Display for SystemRegType {
             SystemRegType::CNTPS_CTL_EL1 => write!(f, "CNTPS_CTL_EL1"),
             SystemRegType::CNTPS_CVAL_EL1 => write!(f, "CNTPS_CVAL_EL1"),
             SystemRegType::PSTATE_SPSEL => write!(f, "PSTATE_SPSEL"),
-
         }
     }
 }
