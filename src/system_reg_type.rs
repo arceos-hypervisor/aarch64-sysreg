@@ -1309,7 +1309,7 @@ pub enum SystemRegType {
 
 impl Display for SystemRegType {
     /// Print system register name
-    fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
+    fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
         match self {
             SystemRegType::OSDTRRX_EL1 => write!(f, "OSDTRRX_EL1"),
             SystemRegType::DBGBVR0_EL1 => write!(f, "DBGBVR0_EL1"),

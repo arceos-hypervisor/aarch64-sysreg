@@ -2639,7 +2639,7 @@ pub enum RegistersType {
 
 impl Display for RegistersType {
     /// Print register name
-    fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
+    fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
         match self {
             RegistersType::NONE => write!(f, "NONE"),
             RegistersType::W0 => write!(f, "W0"),
