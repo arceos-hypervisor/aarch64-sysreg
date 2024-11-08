@@ -1307,7 +1307,6 @@ pub enum SystemRegType {
     CNTPS_CVAL_EL1 = 0x35f804,
     /// System register PSTATE_SPSEL
     PSTATE_SPSEL = 0x37f804,
-
 }
 
 impl Display for SystemRegType {
@@ -1966,7 +1965,6 @@ impl Display for SystemRegType {
             SystemRegType::CNTPS_CTL_EL1 => write!(f, "CNTPS_CTL_EL1"),
             SystemRegType::CNTPS_CVAL_EL1 => write!(f, "CNTPS_CVAL_EL1"),
             SystemRegType::PSTATE_SPSEL => write!(f, "PSTATE_SPSEL"),
-
         }
     }
 }
@@ -2626,7 +2624,6 @@ impl From<usize> for SystemRegType {
             0x33f804 => Self::CNTPS_CTL_EL1,
             0x35f804 => Self::CNTPS_CVAL_EL1,
             0x37f804 => Self::PSTATE_SPSEL,
-
             _ => panic!("Invalid system register value"),
         }
     }
