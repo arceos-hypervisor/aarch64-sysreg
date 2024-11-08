@@ -1307,11 +1307,12 @@ pub enum SystemRegType {
     CNTPS_CVAL_EL1 = 0x35f804,
     /// System register PSTATE_SPSEL
     PSTATE_SPSEL = 0x37f804,
+
 }
 
 impl Display for SystemRegType {
     /// Print system register name
-    fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
+    fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
         match self {
             SystemRegType::OSDTRRX_EL1 => write!(f, "OSDTRRX_EL1"),
             SystemRegType::DBGBVR0_EL1 => write!(f, "DBGBVR0_EL1"),
@@ -1965,6 +1966,7 @@ impl Display for SystemRegType {
             SystemRegType::CNTPS_CTL_EL1 => write!(f, "CNTPS_CTL_EL1"),
             SystemRegType::CNTPS_CVAL_EL1 => write!(f, "CNTPS_CVAL_EL1"),
             SystemRegType::PSTATE_SPSEL => write!(f, "PSTATE_SPSEL"),
+
         }
     }
 }
