@@ -1,4 +1,4 @@
-use core::fmt::{Display, Formatter};
+use core::fmt::{Display, Formatter, LowerHex, Result, UpperHex};
 
 /// Arm64 Operation type
 #[derive(Clone, Copy, Debug, PartialEq)]
@@ -2375,7 +2375,7 @@ pub enum OperationType {
 
 impl Display for OperationType {
     /// Print arm64 operation name
-    fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
         match self {
             OperationType::ERROR => write!(f, "ERROR"),
             OperationType::ABS => write!(f, "ABS"),

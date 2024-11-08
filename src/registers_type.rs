@@ -1,4 +1,4 @@
-use core::fmt::{Display, Formatter};
+use core::fmt::{Display, Formatter, LowerHex, Result, UpperHex};
 
 /// Register type
 #[derive(Clone, Copy, Debug, PartialEq)]
@@ -2639,7 +2639,7 @@ pub enum RegistersType {
 
 impl Display for RegistersType {
     /// Print register name
-    fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
         match self {
             RegistersType::NONE => write!(f, "NONE"),
             RegistersType::W0 => write!(f, "W0"),
